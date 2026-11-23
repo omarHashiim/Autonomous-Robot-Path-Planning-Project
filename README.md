@@ -82,14 +82,13 @@ Autonomous-Robot-Path-Planning/
 ### 1. Clone the Repository
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/omarHashiim/Autonomous-Robot-Path-Planning-Project.git
 ```
 
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd Autonomous-Robot-Path-Planning
-```
+cd Autonomous-Robot-Path-Planning-Project```
 
 ### 3. Create a Virtual Environment
 
@@ -203,5 +202,6 @@ python test_full_system.py
 The main goal is to study and compare classical pathfinding algorithms in autonomous navigation scenarios and evaluate their efficiency, path quality, and reliability under different environmental conditions.
 
 ## License
+
 
 This project is developed for educational and academic purposes.
