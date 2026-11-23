@@ -2,7 +2,7 @@
 
 A Python-based autonomous navigation simulation that enables a robot to find paths in a 2D grid environment while avoiding obstacles using classical pathfinding algorithms.
 
-The project provides an interactive simulation, an animated robot, a Streamlit dashboard, and performance evaluation tools to analyze and compare different algorithms.
+The project provides an interactive simulation, animated robot movement, a Streamlit dashboard, and performance evaluation tools to analyze and compare different pathfinding algorithms.
 
 ## Project Overview
 
@@ -38,19 +38,18 @@ The system implements four classical pathfinding algorithms and evaluates their 
 - Streamlit
 - Matplotlib
 - Pandas
-- NumPy
 
 ## Project Structure
 
 ```text
-Autonomous-Robot-Path-Planning/
+Autonomous-Robot-Path-Planning-Project/
 │
 ├── algorithms/
+│   ├── algorithm_manager.py
+│   ├── astar.py
 │   ├── bfs.py
 │   ├── dfs.py
-│   ├── dijkstra.py
-│   ├── astar.py
-│   └── algorithm_manager.py
+│   └── dijkstra.py
 │
 ├── core/
 │   ├── grid.py
@@ -60,21 +59,34 @@ Autonomous-Robot-Path-Planning/
 │   └── simulator.py
 │
 ├── analysis/
+│   ├── check_high_density.py
 │   ├── multiple_maps_test.py
 │   ├── obstacle_density_test.py
 │   ├── performance_comparison.py
-│   ├── check_high_density.py
 │   ├── visualize_results.py
 │   ├── results.csv
 │   └── plots/
-│
-├── assets/
+│       ├── average_path_length.png
+│       ├── execution_time.png
+│       ├── explored_nodes.png
+│       └── success_rate.png
 │
 ├── dashboard.py
 ├── main.py
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+│
+├── test_astar.py
+├── test_bfs.py
+├── test_comparison.py
+├── test_dfs.py
+├── test_dijkstra.py
+├── test_full_system.py
+├── test_grid.py
+├── test_manager.py
+├── test_path_validation.py
+└── test_robot.py
 ```
 
 ## Installation
@@ -88,7 +100,8 @@ git clone https://github.com/omarHashiim/Autonomous-Robot-Path-Planning-Project.
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd Autonomous-Robot-Path-Planning-Project```
+cd Autonomous-Robot-Path-Planning-Project
+```
 
 ### 3. Create a Virtual Environment
 
@@ -115,13 +128,19 @@ pip install -r requirements.txt
 ### 1. Run the Pygame Simulation
 
 ```bash
+python main.py
+```
+
+Alternatively:
+
+```bash
 python -m visualization.simulator
 ```
 
 ### 2. Run the Streamlit Dashboard
 
 ```bash
-python -m streamlit run dashboard.py
+streamlit run dashboard.py
 ```
 
 The dashboard will open in your default web browser.
@@ -182,7 +201,7 @@ analysis/plots/
 
 ## Project Validation
 
-The project includes tests for:
+The project includes automated tests for:
 
 - Grid functionality.
 - Individual pathfinding algorithms.
@@ -201,7 +220,6 @@ python test_full_system.py
 
 The main goal is to study and compare classical pathfinding algorithms in autonomous navigation scenarios and evaluate their efficiency, path quality, and reliability under different environmental conditions.
 
-## License
+## Academic Use
 
-
-This project is developed for educational and academic purposes.
+This project was developed for educational and academic purposes as part of a study of autonomous navigation and classical pathfinding algorithms.
