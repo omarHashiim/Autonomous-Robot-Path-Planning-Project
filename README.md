@@ -10,6 +10,14 @@ This project simulates an autonomous robot navigating through a grid-based envir
 
 The system implements four classical pathfinding algorithms and evaluates their performance under different obstacle densities.
 
+## Project Screenshots
+
+### Dashboard
+![Dashboard](images/Screenshot%202026-11-23%20181956.png)
+
+### Simulation
+![Simulation](images/Screenshot%202026-11-23%20182026.png)
+
 ## Algorithms Implemented
 
 - **Breadth-First Search (BFS):** Finds the shortest path in an unweighted grid.
@@ -223,3 +231,4 @@ The main goal is to study and compare classical pathfinding algorithms in autono
 ## Academic Use
 
 This project was developed for educational and academic purposes as part of a study of autonomous navigation and classical pathfinding algorithms.
+
